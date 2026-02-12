@@ -14,21 +14,21 @@ config_produccion = {
     "log_level": "error"
 }
 
-# 1️⃣ Configuración final desarrollo
+#Configuración final desarrollo
 config_final_dev = {**config_base, **config_desarrollo}
 
 print("Configuración desarrollo:")
 print(config_final_dev)
 
 
-# 2️⃣ Configuración final producción
+# Configuración final producción
 config_final_prod = {**config_base, **config_produccion}
 
 print(f"Configuración producción:")
 print(config_final_prod)
 
 
-# 3️⃣ Función conectar normal
+# Función conectar normal
 def conectar(host, port, debug, log_level="info"):
     print(f"Conectando con parámetros:")
     print("Host:", host)
@@ -40,7 +40,7 @@ def conectar(host, port, debug, log_level="info"):
 conectar(**config_final_dev)
 
 
-# 4️⃣ Función con kwargs
+# Función con kwargs
 def conectar_flexible(**kwargs):
     print(f"Conexión flexible:")
     for clave, valor in kwargs.items():
